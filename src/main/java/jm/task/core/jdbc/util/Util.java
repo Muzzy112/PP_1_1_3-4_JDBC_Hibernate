@@ -15,8 +15,7 @@ public class Util {
         if (connection == null){
             String db = "pp1db";
             String user = "root";
-            // String password = "???";
-            String password = "43133777";
+            String password = "???";
 
             try {
                 connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + db, user, password);

@@ -1,6 +1,7 @@
 package jm.task.core.jdbc.service;
 
 import jm.task.core.jdbc.dao.UserDao;
+import jm.task.core.jdbc.dao.UserDaoHibernateImpl;
 import jm.task.core.jdbc.dao.UserDaoJDBCImpl;
 import jm.task.core.jdbc.model.User;
 
@@ -12,6 +13,12 @@ public class UserServiceImpl implements UserService {
 
     public UserServiceImpl() {
         this.dao = new UserDaoJDBCImpl();
+    }
+
+    // [!]
+    // Первое решение не проверено, поэтому есть метод для замены dao
+    public void setHIBERNATEImplDao() {
+        this.dao = new UserDaoHibernateImpl();
     }
 
     public void createUsersTable() {

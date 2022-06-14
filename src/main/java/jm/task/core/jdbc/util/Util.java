@@ -50,7 +50,7 @@ public class Util {
             propSettings.put(Environment.POOL_SIZE, "1");
             propSettings.put(Environment.DIALECT, "org.hibernate.dialect.MySQLDialect");
             propSettings.put(Environment.SHOW_SQL, "true");
-            //propSettings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
+            propSettings.put(Environment.CURRENT_SESSION_CONTEXT_CLASS, "thread");
             //propSettings.put(Environment.HBM2DDL_AUTO, "create-drop");
 
             configuration.setProperties(propSettings);

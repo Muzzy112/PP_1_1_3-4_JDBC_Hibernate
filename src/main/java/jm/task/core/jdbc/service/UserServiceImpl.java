@@ -10,7 +10,7 @@ public class UserServiceImpl implements UserService {
 
     UserDao dao;
 
-    public UserServiceImpl() {
+    public UserServiceImpl(){
         this.dao = new UserDaoJDBCImpl();
     }
 
